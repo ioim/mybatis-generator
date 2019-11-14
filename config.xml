@@ -5,12 +5,12 @@
     <classPathEntry location="C:\Users\lvzhy\Desktop\mybatis-generator\mysql-connector-java-5.1.39.jar" />
 
     <context id="sqlGenerate" targetRuntime="MyBatis3">
-        <!-- 是否去除自动生成的注释 true：是 ： false:否 -->
+        <!-- 是否去除自动生成的注释 -->
         <commentGenerator>
             <property name="suppressAllComments" value="true" />
         </commentGenerator>
 
-        <!-- 数据库链接URL、用户名、密码 -->
+        <!-- 数据库链接地址、用户名、密码 -->
         <jdbcConnection driverClass="com.mysql.jdbc.Driver"
             connectionURL="jdbc:mysql://localhost:3306/test?characterEncoding=utf8"
             userId="root" password="123456">
@@ -43,15 +43,7 @@
             <property name="enableSubPackages" value="true" />
         </javaClientGenerator>
 
-        <!-- 要生成哪些表(更改tableName和domainObjectName就可以) -->
-        <!-- tableName:要生成的表名
-        domainObjectName:生成后的实例名
-        enableCountByExample:Count语句中加入where条件查询，默认为true开启
-        enableUpdateByExample:Update语句中加入where条件查询，默认为true开启
-        enableDeleteByExample:Delete语句中加入where条件查询，默认为true开启
-        enableSelectByExample:Select多条语句中加入where条件查询，默认为true开启
-        selectByExampleQueryId:Select单个对象语句中加入where条件查询，默认为true开启
-        -->
+        <!-- 要生成哪些表，tableName：表名，domainObjectName：生成的类名 -->
         <table tableName="TEST_STUDENT" domainObjectName="TestStudent"
             enableCountByExample="false" enableUpdateByExample="false"
             enableDeleteByExample="false" enableSelectByExample="false"
